@@ -21,9 +21,9 @@ public class EmployeeService {
     }
 
     public Employee addEmployee(EmployeeRequest employeeRequest) {
-        if (employeeRequest.getFirstName() == null || employeeRequest.getLastName() == null) {
-            throw new IllegalArgumentException("Employee name should be set.");
-        }
+//        if (employeeRequest.getFirstName() == null || employeeRequest.getLastName() == null) {
+//            throw new IllegalArgumentException("Employee name should be set.");
+//        }
         Employee employee = new Employee(employeeRequest.getFirstName(),
                 employeeRequest.getLastName(),
                 employeeRequest.getDepartment(),
