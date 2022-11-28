@@ -4,6 +4,7 @@ import com.skypro.employee.model.Employee;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 @Service
 public class DepartmentService {
@@ -17,7 +18,7 @@ public class DepartmentService {
     public List<Employee> getEmployeeByDepartment(int department) {
         return employeeService.getAllEmployee().stream().
                 filter(e -> e.getDepartment() == department).
-                toList();
+                collect(Collectors.toList());
     }
 
 

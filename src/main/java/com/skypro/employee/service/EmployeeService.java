@@ -16,8 +16,8 @@ import java.util.stream.Collectors;
 public class EmployeeService {
     private final Map<Integer, Employee> employees = new HashMap<>();
 
-    public Collection<Employee> getAllEmployee() {
-        return this.employees.values();
+    public List<Employee> getAllEmployee() {
+        return this.employees.values().stream().collect(Collectors.toList());
     }
 
     public Employee addEmployee(EmployeeRequest employeeRequest) {

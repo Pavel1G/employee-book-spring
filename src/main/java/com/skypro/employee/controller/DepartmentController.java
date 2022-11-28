@@ -19,8 +19,8 @@ public class DepartmentController {
         this.departmentService = departmentService;
     }
 
-    @GetMapping("department/employees")
-    public Collection<Employee> getEmployeesByDepartment(@RequestParam("department") int department) {
+    @GetMapping("department/{id}/employees")
+    public Collection<Employee> getEmployeesByDepartment(@RequestParam("id") int department) {
         return this.departmentService.getEmployeeByDepartment(department);
     }
 
